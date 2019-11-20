@@ -1,0 +1,62 @@
+html {
+  font-size: 15px;
+  height: 100%;
+}
+body {
+  font-family: 'Barlow', sans-serif;
+  font-size: 1rem;
+  font-weight: normal;
+  line-height: 1.45;
+  overflow-x: hidden;
+  color: $text-color;
+}
+.homepage {
+  background: url(../images/homepage-bg.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.text-shadow {
+  text-shadow: 4px 2px 0 rgba(0,0,0,.35);
+}
+
+.text-muted {
+  color: $text-muted;
+}
+
+a {
+  color: $primary;
+  transition: all .35s ease-in;
+  &:hover {
+    color: darken($primary, 5%);
+    text-decoration: none;
+  }
+  &:focus {
+    color: darken($primary, 15%);
+  }
+}
+
+@each $name, $color in $brand {
+  .text-#{$name} {
+    color: $color !important;
+  }
+  .bg-#{$name} {
+    background-color: $color !important;
+  }
+}
+
+.bg-transparent {
+  background-color: transparent !important;
+}
+
+.bg-gray-lighter {
+  background-color: $gray-lighter;
+}
+
+@media(min-width: 1440px) {
+  html {
+    font-size: 18px;
+  }
+}

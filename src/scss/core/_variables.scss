@@ -1,0 +1,44 @@
+$white: #fff;
+$blue: #2196F3;
+$indigo: #3F51B5;
+$purple: #9C27B0;
+$pink: #E91E63;
+$red: #f44336;
+$orange: #FF9800;
+$yellow: #FFEB3B;
+$green: #4CAF50;
+$teal: #009688;
+$cyan: #00BCD4;
+$gray: #6c757d;
+$gray-dark: #343a40;
+$gray-light: #eee;
+$gray-lighter: #f5f5f5;
+$primary: $purple;
+$secondary: #6c757d;
+$success: $green;
+$info: $cyan;
+$warning: $orange;
+$danger: $red;
+$light: #f8f9fa;
+$dark: #343a40;
+$black: #333;
+
+$brand: () !default;
+$brand: map-merge((
+  "primary": $purple,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark
+), $brand);
+
+$shadow-sm: 0 .5rem .75rem -.35rem rgba(0,0,0,.125);
+$shadow-md: 0 .75rem .75rem -.35rem rgba(0,0,0,.125);
+$shadow-lg: 0 1rem .75rem -.35rem rgba(0,0,0,.125);
+
+$border-color: #dfdfdf;
+$text-color: $black;
+$text-muted: #777;

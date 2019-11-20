@@ -1,0 +1,38 @@
+.nav-pills {
+  background-color: $gray-light;
+  border-radius: .25rem;
+  padding: .5rem;
+  display: block;
+  width: 100%;
+  .nav-link {
+    color: $gray-dark;
+    text-align: center;
+    transition: all .25s ease-in;
+    &:hover {
+      background-color: rgba(0,0,0,.05);
+    }
+  }
+  .nav-link.active {
+    background-color: $warning;
+    @include color-yiq($warning);
+    @include shadow-small($warning);
+  }
+  .show {
+    >.nav-link {
+      background-color: $warning;
+      @include color-yiq($warning);
+      @include shadow-small($warning);
+    }
+  }
+}
+
+@media(min-width: 768px) {
+  .nav-pills {
+    display: inline-flex;
+    width: auto;
+    .nav-link {
+      text-align: left;
+      margin: 0 .15rem;
+    }
+  }
+}

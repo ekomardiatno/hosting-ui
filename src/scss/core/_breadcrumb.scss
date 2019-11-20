@@ -1,0 +1,10 @@
+.breadcrumb {
+  &.text-white {
+    li {
+      color: $white;
+      &::before, a {
+        color: $white;
+      }
+    }
+  }
+}

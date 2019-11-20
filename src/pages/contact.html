@@ -1,0 +1,40 @@
+@@include('../inc/header.html')
+  <div class="section-page-header">
+    <div class="fill-sph">
+      <div class="container">
+        <h1 class="font-weight-bold text-center text-light text-shadow text-uppercase">Hubungi Kami</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center p-0 bg-transparent text-white">
+            <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Hubungi Kami</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-white pt-5">
+    <div class="container">
+      <h1 class="font-weight-bold text-center text-warning">Ada yang bisa dibantu?</h1>
+      <p class="text-center mb-5 text-muted">Silakan hubungi kami lewat form dibawah jika ada kendala atau sekadar ingin mengirimkan kritik dan saran.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form action="" method="post">
+            <div class="form-wrapper">
+              <input required type="text" id="nama" placeholder="Nama Lengkap" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="email" id="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="text" id="subjek" placeholder="Subjek" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <textarea required name="pesan" id="pesan" placeholder="Pesan" class="form-control"></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Kirim</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+@@include('../inc/footer.html')

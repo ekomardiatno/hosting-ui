@@ -1,0 +1,36 @@
+@mixin button-variant($bg, $border: 0, $bg-hover: darken($bg, 5%), $bg-active: darken($bg, 10%)) {
+  background-color: $bg;
+  @include color-yiq($bg);
+  border: $border;
+  box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($bg, 0), .45);
+
+  @include hover {
+    @include color-yiq($bg-hover);
+    border: $border;
+    background-color: $bg-hover;
+    box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($bg, 0), .65);
+  }
+
+  &:focus,
+  &.focus {
+    box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($bg, 0), .45);
+  }
+
+  &.disabled,
+  &:disabled {
+    @include color-yiq($bg);
+    background-color: $bg;
+    border: $border;
+  }
+
+  &:not(:disabled):not(.disabled):active,
+  &:not(:disabled):not(.disabled).active,
+  .show>&.dropdown-toggle {
+    @include color-yiq($bg-active);
+    background-color: $bg-active;
+
+    &:focus {
+      box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($bg, 0), .75);
+    }
+  }
+}

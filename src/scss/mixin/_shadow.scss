@@ -1,0 +1,7 @@
+@mixin shadow-small($bg) {
+  box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($bg, 0), .45);
+}
+
+@mixin shadow-thin($bg, $opacity) {
+  box-shadow: 0 1.75rem 1.5rem -.95rem opacify(rgba($bg, 0), $opacity);
+}

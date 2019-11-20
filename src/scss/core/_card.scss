@@ -1,0 +1,35 @@
+.card {
+  box-shadow: $shadow-sm;
+  border-color: $border-color;
+  .card-body, .card-footer, .card-header {
+    border-color: $border-color;
+  }
+}
+
+.features {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  li {
+    padding: .25rem 0;
+    font-weight: 700;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 1.5rem;
+    &::before {
+      font-family: "dripicons-v2";
+      content: "\53";
+      color: $success;
+      font-size: .95rem;
+      position: absolute;
+      top: 6px;
+      left: 0;
+    }
+  }
+  &.thin {
+    li {
+      font-weight: normal;
+      text-transform: none;
+    }
+  }
+}

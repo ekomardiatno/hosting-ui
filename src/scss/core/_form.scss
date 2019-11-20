@@ -1,0 +1,57 @@
+.form-control {
+  border: 0;
+  border-bottom: 1px solid $border-color;
+  border-radius: 0;
+  padding: .5rem 0;
+  position: relative;
+  background-color: transparent !important;
+  &:focus {
+    box-shadow: none !important;
+    border-color: $border-color;
+  }
+}
+
+.form-wrapper {
+  position: relative;
+  transition: margin .35s ease-in;
+  margin-bottom: 1rem;
+  display: inline-block;
+  width: 100%;
+  label {
+    position: absolute;
+    left: 0;
+    top: .5rem;
+    transition: all .35s ease-in;
+    color: $text-muted;
+  }
+  &.filled, &.focused {
+    margin-top: .75rem;
+    label {
+      top: -1rem;
+      font-size: 80%;
+    }
+  }
+  &.focused {
+    &::after {
+      width: 100%;
+    }
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    background-color: $primary;
+    transition: width .35s ease-in;
+  }
+}
+
+textarea {
+  &.form-control {
+    min-height: 100px;
+    height: 100px;
+    max-height: 200px;
+  }
+}

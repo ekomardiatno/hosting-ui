@@ -1,0 +1,53 @@
+@@include('../inc/header.html')
+  <div class="section-page-header">
+    <div class="fill-sph">
+      <div class="container">
+        <h1 class="font-weight-bold text-center text-light text-shadow text-uppercase">Daftarkan Akun</h1>
+        <nav aria-label="breadcrumb">
+          <ol class="breadcrumb justify-content-center p-0 bg-transparent text-white">
+            <li class="breadcrumb-item"><a href="#">Beranda</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Daftarkan Akun</li>
+          </ol>
+        </nav>
+      </div>
+    </div>
+  </div>
+  <div class="section bg-white pt-5">
+    <div class="container">
+      <h1 class="font-weight-bold text-center text-warning">Membuat akun</h1>
+      <p class="text-center mb-5 text-muted">Silakan isi data diri anda untuk membuat akun.</p>
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <form action="" method="post">
+            <div class="form-wrapper">
+              <input required type="text" id="nama" placeholder="Nama Lengkap" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="text" name="username" placeholder="Username" id="username" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="email" id="email" placeholder="Email" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <textarea required name="alamat" id="alamat" placeholder="Alamat" class="form-control"></textarea>
+            </div>
+            <div class="form-wrapper">
+              <input required type="text" name="nohp" id="nohp" placeholder="No. Handphone" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="password" name="password" id="password" placeholder="Password" class="form-control">
+            </div>
+            <div class="form-wrapper">
+              <input required type="password" name="repassword" id="repassword" placeholder="Konfirmasi Password" class="form-control">
+            </div>
+            <button type="submit" class="btn btn-primary btn-block mt-3">Daftar</button>
+            <div class="text-right mt-3">
+              <p class="small m-0">Sudah memiliki akun? <a href="login.html">Masuk</a></p>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+
+@@include('../inc/footer.html')

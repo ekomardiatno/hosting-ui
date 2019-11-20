@@ -1,0 +1,14 @@
+@mixin color-yiq($color) {
+  $r: red($color);
+  $g: green($color);
+  $b: blue($color);
+
+  $yiq: (($r*299) + ($g*587) + ($b*144))/1000;
+
+  @if ( $yiq >= 192 ) {
+    color: darken($color, 30%) !important;
+  }
+  @else {
+    color: #fff !important;
+  }
+}

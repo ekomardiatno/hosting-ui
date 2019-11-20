@@ -1,0 +1,138 @@
+.footer {
+  background-image: url(../images/bg-purple.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: $gray-lighter;
+  font-size: .95rem;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba($black, .5);
+  }
+  .footer-top, .footer-bottom {
+    position: relative;
+  }
+}
+
+.footer-top {
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: row;
+  margin: 0 -.5rem;
+  .about, .map-wrapper {
+    width: 50%;
+    margin: 0 .5rem;
+  }
+  .embed-map {
+    height: 200px;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    background-color: $gray-lighter;
+    @include shadow-thin($gray-lighter, .35);
+    iframe {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  &.map-wrapper {
+    flex-basis: 50%;
+  }
+  .about {
+    img {
+      height: 35px;
+      width: auto;
+      margin-bottom: .75rem;
+      filter: brightness(1.25);
+    }
+  }
+}
+
+.footer-bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  border-top: 1px solid rgba($gray-lighter,.15);
+  padding: 1rem 0;
+  .logo-kominfo {
+    width: 20px;
+    height: 20px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background-image: url(../images/logo-kominfo.png);
+    background-size: 18px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-color: $white;
+    border-radius: 50%;
+    margin: 0 .25rem;
+  }
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    flex: 1;
+    &:first-child {
+      justify-content: flex-start;
+    }
+    &:last-child {
+      justify-content: flex-end;
+    }
+  }
+}
+
+.list-socmed {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 0 -.5rem;
+  a {
+    width: 40px;
+    height: 40px;
+    margin: 0 .5rem;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    &.fb {
+      background-image: url(../images/social-media/facebook.png);
+    }
+    &.tw {
+      background-image: url(../images/social-media/twitter-1.png);
+    }
+    &.ig {
+      background-image: url(../images/social-media/instagram.png);
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .footer-bottom {
+    flex-direction: column;
+    div {
+      text-align: center;
+      &:first-child {
+        margin-bottom: .25rem;
+      }
+    }
+  }
+  .footer-top {
+    flex-direction: column;
+    margin: 0;
+    .about, .map-wrapper {
+      margin: 0;
+      width: 100%;
+    }
+    .about {
+      margin-bottom: 1.5rem;
+    }
+  }
+}

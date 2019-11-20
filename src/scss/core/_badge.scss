@@ -1,0 +1,7 @@
+@each $name, $color in $brand {
+  .badge-#{$name} {
+    background-color: $color;
+    box-shadow: 0 0 1.275rem 0.125rem opacify(rgba($color, 0), .45);
+    @include color-yiq($color);
+  }
+}

@@ -1,0 +1,92 @@
+.navbar {
+  padding: 1rem;
+  background-color: rgba(255,255,255,.80);
+  &.affix {
+    background-color: $white;
+  }
+  .navbar-toggler {
+    outline: 0;
+    padding: .25rem .4rem;
+    border: 0;
+    background-color: $warning;
+    @include shadow-small($warning);
+    span {
+      color: $white;
+    }
+  }
+}
+.navbar-brand {
+  img {
+    height: 40px;
+  }
+}
+.navbar-nav .nav-link {
+  text-transform: uppercase;
+  font-weight: 500;
+}
+
+@media(min-width: 992px) {
+  .navbar {
+    box-shadow: 0 5px 10px rgba(0,0,0,.05);
+  }
+}
+
+@media(max-width: 991px) {
+  .navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: transparent;
+    padding: .75rem 1rem;
+    .navbar-brand {
+      opacity: 0;
+      transition: opacity .35s ease-in;
+    }
+    &.affix {
+      box-shadow: 0 5px 10px rgba(0,0,0,.05);
+      .navbar-brand {
+        opacity: 1;
+      }
+    }
+    .navbar-collapse {
+      position: fixed;
+      display: block;
+      top: 0;
+      height: 100vh;
+      width: 300px;
+      left: -300px;
+      padding: 1rem;
+      padding-top: 3rem;
+      background-color: $gray-dark;
+      transition: left .35s ease-in;
+      .nav-link {
+        padding: 1rem;
+        color: $white;
+        &.active {
+          color: $warning;
+        }
+      }
+      &.opened {
+        left: 0;
+      }
+    }
+    .overlay-opened {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background-color: rgba(0,0,0,.25);
+    }
+  }
+}
+
+@media(max-width: 767px) {
+  .navbar {
+    .navbar-collapse {
+      width: 240px;
+      left: -240px;
+    }
+  }
+}
